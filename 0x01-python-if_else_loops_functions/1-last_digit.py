@@ -6,20 +6,20 @@ number = random.randint(-10000, 10000)
 
 if number < 0:
 
-    last_d = number % -10
+    ld = number % -10
 
 else:
 
-    last_d = number % 10
+    ld = number % 10
 
-if last_d > 5:
+if ld > 5:
 
-    print(f"Last digit of {number:d} is {last_d:d} and is greater than 5")
+    print(f"Last digit of {number:d} is {ld:d} and is greater than 5")
 
-elif last_d == 0:
+elif ld == 0:
 
-    print(f"Last digit of {number:d} is {last_d:d} and is 0")
+    print(f"Last digit of {number:d} is {ld:d} and is 0")
 
-elif last_d < 6 and last_d != 0:
+elif ld < 6 and ld != 0:
 
-    print(f"Last digit of {number:d} is {last_d:d} and is less than 6 and not 0")
+    print(f"Last digit of {number:d} is {ld:d} and is less than 6 and not 0")
