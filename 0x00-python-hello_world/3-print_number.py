@@ -2,4 +2,4 @@
 
 number = 98
 
-print("{number} Battery street".format(number = number))
+print("{} Battery street".format(number))
