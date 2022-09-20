@@ -10,5 +10,5 @@ def print_last_digit(number):
 
         ld = number % -10
 
-    print("{:d}".format(ld))
+    print("{:d}".format(ld), end="")
     return ld
