@@ -8,4 +8,5 @@ def uppercase(str):
 
             letter = chr(ord(letter) - (ord('a') - ord('A')))
 
-        print("{:s}".format(letter),end="")
+        print("{:s}".format(letter), end="")
+    print("")
