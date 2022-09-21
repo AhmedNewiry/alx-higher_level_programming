@@ -5,3 +5,4 @@ for i in range(0, 10):
             print("{:d}{:d}".format(i, x), end="")
             if i != 8:
                 print(" ,", end="")
+print("")
