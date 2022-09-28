@@ -28,7 +28,7 @@ temp2 = temp->next;
 if (new_node->n <= temp->n && temp == *head)
 {
 *head = new_node;
-new_node->next = temp
+new_node->next = temp;
 return new_node;
 }
 temp->next = new_node;
