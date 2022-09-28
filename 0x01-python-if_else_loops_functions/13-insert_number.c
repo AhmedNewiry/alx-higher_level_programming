@@ -28,7 +28,7 @@ temp->next = new_node;
 new_node->next = temp2;
 return new_node;
 }
-esle
+else
 {
 temp->next = new_node;
 new_node->next = NULL;
