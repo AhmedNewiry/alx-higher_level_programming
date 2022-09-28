@@ -26,5 +26,5 @@ return new_node;
 temp = temp->next;
 }
 }
-
+return (NULL);
 }
