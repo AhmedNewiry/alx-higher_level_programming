@@ -24,16 +24,15 @@ while (temp)
 if (new_node->n <= temp->next->n)
 {
 temp2 = temp->next;
-if (temp->next->next == NULL)
-{
-temp->next = new_node;
-new_node->next = NULL;
-return new_node;
-}
-
 temp->next = new_node;
 new_node->next = temp2;
 return new_node;
+}
+esle
+{
+temp->next = new_node;
+new_node->next = NULL;
+return (new_node);
 }
 temp = temp->next;
 }
