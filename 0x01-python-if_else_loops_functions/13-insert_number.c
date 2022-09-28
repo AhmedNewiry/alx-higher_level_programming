@@ -28,9 +28,9 @@ temp->next = new_node;
 new_node->next = temp2;
 return new_node;
 }
-if (temp->next == NULL)
+if (temp == NULL)
 {
-temp->next = new_node;
+temp = new_node;
 new_node->next = NULL;
 return (new_node);
 }
