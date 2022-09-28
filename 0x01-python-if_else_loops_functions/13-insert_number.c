@@ -28,6 +28,12 @@ temp->next = new_node;
 new_node->next = temp2;
 return new_node;
 }
+if (temp->next == NULL)
+{
+temp->next = new_node;
+new_node->next = NULL;
+return (new_node);
+}
 temp = temp->next;
 }
 }
