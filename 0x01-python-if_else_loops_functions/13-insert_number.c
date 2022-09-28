@@ -30,7 +30,7 @@ return new_node;
 }
 temp = temp->next;
 }
-temp->next = new_node;
+temp = new_node;
 new_node->next = NULL;
 return (new_node);
 }
