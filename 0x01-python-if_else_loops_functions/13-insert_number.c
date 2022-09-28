@@ -19,7 +19,7 @@ new_node->next = NULL;
 return (new_node);
 }
 
-while (temp)
+while (temp->next)
 {
 if (new_node->n <= temp->next->n)
 {
@@ -30,7 +30,7 @@ return new_node;
 }
 temp = temp->next;
 }
-temp = new_node;
+temp->next = new_node;
 new_node->next = NULL;
 return (new_node);
 }
