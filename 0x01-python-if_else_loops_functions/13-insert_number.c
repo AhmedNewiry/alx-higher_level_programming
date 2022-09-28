@@ -14,9 +14,10 @@ if (*head == NULL)
 new_node->next = NULL;
 return (new_node);
 }
+
 while (temp)
 {
-if (new_node->n >= temp->n )
+if (new_node->n <= temp->next->n || temp->next == NULL)
 {
 temp2 = temp->next;
 temp->next = new_node;
@@ -27,4 +28,6 @@ temp = temp->next;
 }
 }
 return (NULL);
+
 }
+
