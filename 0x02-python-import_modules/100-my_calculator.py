@@ -11,5 +11,5 @@ if __name__ == "__main__":
         exit(1)
     process = op_list[sys.argv[2]]
     process = calculator_1.process
-    print(f"{sys.argv[1]} {sys.argv[2]} {sys.argv[3]} = 
+    print(f"{sys.argv[1]} {sys.argv[2]} {sys.argv[3]} = \
     {process(int(sys.argv[1]), int(sys.argv[3]))}")
