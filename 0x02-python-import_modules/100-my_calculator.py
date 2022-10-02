@@ -6,7 +6,7 @@ if __name__ == "__main__":
         print(f"Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
     op_list = {'+': "add", '-':"sub", '/':"div", '*':"mul"}
-    if sys.argv[2] not in list(op_list.key()):
+    if sys.argv[2] not in list(op_list.keys()):
         print(f"Unknown operator. Available operators: +, -, * and /")
         exit(1)
     process = op_list[sys.argv[2]]
