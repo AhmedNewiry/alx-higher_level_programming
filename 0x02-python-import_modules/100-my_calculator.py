@@ -11,4 +11,4 @@ if __name__ == "__main__":
         exit(1)
     a = int(sys.argv[1])
     b = int(sys.argv[3])
-    print("{} {sys.argv[2]} {}".format(a, b, op_list[sys.argv[2]](a, b)))
+    print("{} {} {}".format(a, sys.argv[2], b, op_list[sys.argv[2]](a, b)))
