@@ -3,5 +3,6 @@
 class Square:
     """class square with size attribute"""
     def __init__(self, size):
-    self.size = size
+    """initialize a square instance"""
+    self.__size = size
 
