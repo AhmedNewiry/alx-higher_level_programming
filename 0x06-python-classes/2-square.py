@@ -6,11 +6,8 @@ class Square:
 
     def __init__(self, size = 0):
         """ initialization a new squre:
-
-        Args:
-
+        Args
             size (int): the square size
-
         """
 
         if not isinstance(size, int):
