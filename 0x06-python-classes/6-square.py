@@ -1,10 +1,7 @@
 #!/usr/bin/python3
 
 
-
 """ defining a class."""
-
-
 
 
 class Square:
@@ -38,7 +35,9 @@ class Square:
     @property    
 
 
+
     def size(self):
+
 
 
         """ size attribue getter
@@ -55,6 +54,7 @@ class Square:
 
 
     def position(self):
+
 
 
         """ position attribue getter
@@ -87,19 +87,14 @@ class Square:
 
         for item in value:
 
-            if not isinstance(item, int) or not isinstance(value, tuple) or item > 0 or len(value) != 2:
+            if not isinstance(value, tuple) or not isinstance(item, int) or item < 0 or len(value) != 2:
 
                 raise TypeError("position must be a tuple of 2 positive integers")
 
         self.__position = value        
-
      
 
     @size.setter
-
-
-
-
 
 
 
@@ -115,15 +110,17 @@ class Square:
 
         """
 
-
-
         if not isinstance(value, int):
+
 
             raise TypeError("size must be an integer")
 
+
         elif value < 0:
 
+
             raise ValueError("size must be >= 0")  
+
 
         self.__size = value
 
@@ -138,7 +135,6 @@ class Square:
         """
 
 
-
         return (self.__size) ** 2
 
     def my_print(self):
@@ -147,7 +143,7 @@ class Square:
 
         for i in range(self.__size):
 
-            [print(" ", end="") for x in range(self.__position[1])]
+            [print("_", end="") for x in range(self.__position[1])]
 
             [print("#", end="") for y in range(self.__size)]
 
