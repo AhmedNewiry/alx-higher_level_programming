@@ -16,6 +16,7 @@ class Square:
         Args:
 
             size (int): the square size
+        Returns: None
 
         """
         if not isinstance(size, int):
