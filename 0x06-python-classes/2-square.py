@@ -12,6 +12,7 @@ class Square:
 
         """ initialization a new squre:
 
+
         Args:
 
             size (int): the square size
