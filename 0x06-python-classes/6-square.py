@@ -5,10 +5,14 @@
 """ defining a class."""
 
 
+
+
 class Square:
 
 
+
     """ represents a square class."""
+
 
 
     def __init__(self, size = 0, position = (0, 0)):
@@ -34,9 +38,7 @@ class Square:
     @property    
 
 
-
     def size(self):
-
 
 
         """ size attribue getter
@@ -52,9 +54,7 @@ class Square:
     @property    
 
 
-
     def position(self):
-
 
 
         """ position attribue getter
@@ -69,15 +69,7 @@ class Square:
 
 
 
-
-
-
-
     @position.setter
-
-
-
-
 
 
 
@@ -95,7 +87,7 @@ class Square:
 
         for item in value:
 
-            if not isinstance(item, int) and not isinstance(value, tuple) and item > 0:
+            if not isinstance(item, int) or not isinstance(value, tuple) or item > 0 or len(value) != 2:
 
                 raise TypeError("position must be a tuple of 2 positive integers")
 
@@ -127,26 +119,16 @@ class Square:
 
         if not isinstance(value, int):
 
-
-
             raise TypeError("size must be an integer")
-
-
 
         elif value < 0:
 
-
-
             raise ValueError("size must be >= 0")  
-
-
 
         self.__size = value
 
 
-
     def area(self):
-
 
 
         """calculates the area of the square
