@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ defining a class."""
 
+
 class Square:
     """ represents a square class."""
 
@@ -13,8 +14,6 @@ class Square:
         """  
 
         self.size = size
-
-
 
     @property    
     def size(self):
@@ -49,6 +48,7 @@ class Square:
 	   the square area
 
         """
+
         return (self.__size) ** 2
 
     def my_print(self):
