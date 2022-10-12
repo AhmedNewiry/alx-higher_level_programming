@@ -43,4 +43,4 @@ class Square:
 
         """
 
-        return (self.__size / 4) ** 2
+        return (self.__size) ** 2
