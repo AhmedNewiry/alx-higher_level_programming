@@ -1,20 +1,14 @@
 #!/usr/bin/python3
 
 
-
-
 """ defining a class."""
-
-
 
 
 class Square:
 
 
 
-
     """ represents a square class."""
-
 
 
 
@@ -90,9 +84,11 @@ class Square:
 
         for item in value:
 
-            if not isinstance(item, int) and not isinstance(value, tuple) and item > 0:
+            if not isinstance(item, int) and not \
+            isinstance(value, tuple) and item > 0:
 
-                raise TypeError("position must be a tuple of 2 positive integers")
+                raise TypeError("position must be a tuple of 2
+                positive integers")
 
         self.__position = value        
 
@@ -157,7 +153,8 @@ class Square:
 
             [print("#", end="") for i in range(self.__size)]
 
-            [print(" ", end="") for x in range(self.__position) if not self.__position[1] > 0]
+            [print(" ", end="") for x in range(self.__position) \
+            if not self.__position[1] > 0]
 
             print("")
 
