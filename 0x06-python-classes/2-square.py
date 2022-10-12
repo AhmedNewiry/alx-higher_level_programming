@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python3i
 """ defining a class."""
 
 class Square:
@@ -6,7 +6,7 @@ class Square:
 
     def __init__(self, size = 0):
         """ initialization a new squre:
-        Args
+        Args:
             size (int): the square size
         """
 
