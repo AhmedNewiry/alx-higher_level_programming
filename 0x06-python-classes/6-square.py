@@ -2,15 +2,7 @@
 
 
 
-
-
-
-
 """ defining a class."""
-
-
-
-
 
 
 
@@ -18,13 +10,7 @@ class Square:
 
 
 
-
-
     """ represents a square class."""
-
-
-
-
 
 
 
@@ -51,9 +37,7 @@ class Square:
     @property    
 
 
-
     def size(self):
-
 
 
         """ size attribue getter
@@ -69,9 +53,7 @@ class Square:
     @property    
 
 
-
     def position(self):
-
 
 
         """ position attribue getter
@@ -87,14 +69,7 @@ class Square:
 
 
 
-
-
-
     @position.setter
-
-
-
-
 
 
 
@@ -125,9 +100,6 @@ class Square:
      
 
     @size.setter
-
-
-
 
 
 
@@ -186,7 +158,7 @@ class Square:
 
         for i in range(self.__size):
 
-            [print("_", end="") for x in range(self.__position[1])]
+            [print(" ", end="") for x in range(self.__position[1])]
 
             [print("#", end="") for y in range(self.__size)]
 
