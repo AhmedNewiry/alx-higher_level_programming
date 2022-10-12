@@ -3,7 +3,6 @@
 
 """ defining a class."""
 
-
 class Square:
 
     """ represents a square class."""
@@ -11,7 +10,6 @@ class Square:
     def __init__(self, size = 0):
 
         """ initialization a new squre:
-
 
         Args:
 
