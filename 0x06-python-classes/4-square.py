@@ -42,7 +42,7 @@ class Square:
 
 
 
-    @property.setter
+    @size.setter
 
 
 
