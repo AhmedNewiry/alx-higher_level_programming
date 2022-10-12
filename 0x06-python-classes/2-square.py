@@ -4,10 +4,6 @@
 """ defining a class."""
 
 
-from multiprocessing.sharedctypes import Value
-
-
-
 class Square:
 
 
