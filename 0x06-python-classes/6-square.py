@@ -1,23 +1,14 @@
-ng a class."""
+#!/usr/bin/python3
 
 
 
-
-
+""" defining a class."""
 
 
 class Square:
 
 
-
-
-
     """ represents a square class."""
-
-
-
-
-
 
 
     def __init__(self, size = 0, position = (0, 0)):
