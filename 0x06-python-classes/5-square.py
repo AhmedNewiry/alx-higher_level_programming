@@ -44,8 +44,7 @@ class Square:
         """ calculates the area of the square
 
         Returns:
-	    the square area
-
+            the square area
         """
         return (self.__size) ** 2
 
