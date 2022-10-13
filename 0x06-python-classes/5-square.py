@@ -5,16 +5,16 @@
 class Square:
     """ represents a square class."""
 
-    def __init__(self, size = 0):
+    def __init__(self, size=0):
         """ initialization a new squre.
 
         Args:
             size (int): the square size
 
-        """  
+        """
         self.size = size
 
-    @property    
+    @property
     def size(self):
         """ size attribue getter
 
@@ -39,12 +39,12 @@ class Square:
         self.__size = value
 
     def area(self):
-        """ calculates the area of the square
+	""" calculates the area of the square
 
         Returns:
 	    the square area
 
-        """
+	"""
         return (self.__size) ** 2
 
     def my_print(self):
