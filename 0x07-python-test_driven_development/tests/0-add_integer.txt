@@ -2,7 +2,6 @@ The ``0-add_integer.py`` module
 
 ======================
 
-
 Using ``add_integer``
 
 -------------------
@@ -10,6 +9,7 @@ Using ``add_integer``
 import add_integer function from add_integer module
 
 add_integer = __import__("test").add_integer
+
 
 >>> from 0-add_integer import add_integer
 
@@ -39,6 +39,12 @@ test for one postitive integer and a string:
     ...
     TypeError: b must be an integer
 
+test for a string and a postitive integer:
+    >>> add_integer("ahmed", 1)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
 test for the opposite of last one:
     >>> add_integer("ahmed", 1)
     Traceback (most recent call last):
@@ -57,8 +63,33 @@ test for the NaN:
     ...
     ValueError: cannot convert float NaN to integer
 
+test for the NaN:
+    >>> add_integer(1, float("nan"))
+    Traceback (most recent call last):
+    ...
+    ValueError: cannot convert float NaN to integer
+
 test for the inf:
     >>> add_integer(float("inf"), 1)
     Traceback (most recent call last):
     ...
     OverflowError: cannot convert float infinity to integer
+
+test for the inf:
+    >>> add_integer(1, float("inf"))
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
+
+
+
+test for one argument:
+    >>> add_integer(1)
+    99
+
+test for more than 2 argumets:
+    >>> add_integer(1, 2, 8)
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() takes from 1 to 2 positional \
+    arguments but 3 were given
