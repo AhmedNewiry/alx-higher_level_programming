@@ -11,7 +11,7 @@ import add_integer function from add_integer module
 add_integer = __import__("test").add_integer
 
 
->>> from 0-add_integer import add_integer
+>>> add_integer = __import__("test").add_integer
 
 test for two postitive integers:
     >>> add_integer(1, 3)
