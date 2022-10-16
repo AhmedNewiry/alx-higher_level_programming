@@ -1,0 +1,54 @@
+The `4-print_square`` module
+
+======================
+
+Using ``say_my_name``
+
+-------------------
+
+import print_square function from 4-print_square
+    >>> import print_square function from 4-print_square
+
+test for integer greater than 0:
+    >>> print_square(2)
+    ##
+    ##
+
+test for negative integer:
+    >>> print_square(-2)
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be >= 0
+
+test for postive float:
+    >>> print_square(1.0)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+test for negative float:
+    >>> print_square(1.0)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+test for integer 0:
+    >>> print_square(0)
+
+test for string:
+    >>> print_square("test")
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+test for string:
+    >>> print_square(True)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+test for None:
+    >>> print_square(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
