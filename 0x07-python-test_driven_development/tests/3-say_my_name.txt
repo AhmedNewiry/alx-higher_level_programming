@@ -1,0 +1,54 @@
+The `3-say_my_name`` module
+
+======================
+
+Using ``say_my_name``
+
+-------------------
+import say_my_name function from 3-say_my_name
+
+    >>> say_my_name = __import__("3-say_my_name").say_my_name
+
+test for two string names:
+    >>> say_my_name("ahmed", "ali")
+    my name is ahmed ali
+
+test for first name only:
+    >>> say_my_name("ahmed")
+    my name is ahmed 
+
+test for firt_name as integer:
+    >>> say_my_name(1)
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+test for firt_name as boolean:
+    >>> say_my_name(True)
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+test for firt_name as float:
+    >>> say_my_name(1.0)
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+test for last_name as float:
+    >>> say_my_name("ahmed", 1.0)
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+
+test for last_name as boolean:
+    >>> say_my_name("ahmed", True)
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+
+test for more than 2 arguments:
+    >>> say_my_name("ahmed", "ali", "Omar")
+    Traceback (most recent call last):
+    ...
+    TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
