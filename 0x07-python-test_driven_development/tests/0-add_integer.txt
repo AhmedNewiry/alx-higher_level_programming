@@ -91,5 +91,4 @@ test for more than 2 argumets:
     >>> add_integer(1, 2, 8)
     Traceback (most recent call last):
     ...
-    TypeError: add_integer() takes from 1 to 2 positional \
-    arguments but 3 were given
+    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
