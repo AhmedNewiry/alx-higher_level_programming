@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This module contains the is_name_class function"""
+"""This module contains the is_same_class function"""
 
 
 def is_same_class(obj, a_class):
