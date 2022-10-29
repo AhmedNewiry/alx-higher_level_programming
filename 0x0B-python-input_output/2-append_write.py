@@ -8,10 +8,9 @@ def append_write(filename="", text=""):
     Args:
         filename (str): the name of the file.
         text (str): the string to append to the file.
-
     Returns:
         The number of characterw appended.
 
     """
     with open(filename, "a", encoding="utf-8") as f:
-         return f.write(text)
+        return f.write(text)
