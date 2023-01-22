@@ -14,4 +14,4 @@ if __name__ == "__main__":
         with request.urlopen(url) as r:
             print(r.read().decode('utf8'))
     except error.HTTPError as err:
-    	print(f"Error code: {err.code}")
+        print(f"Error code: {err.code}")
