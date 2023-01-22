@@ -10,4 +10,4 @@ if __name__ == "__main__":
 		result = res.read()
 		print(f"\t- type: {type(result)}")
 		print(f"\t- content: {result}")
-		print(f"\t- utf8 content: {result.decode("UTF-8")}")
+		print(f"\t- utf8 content: {result.decode('utf8')}")
