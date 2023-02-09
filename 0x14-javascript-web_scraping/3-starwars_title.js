@@ -5,5 +5,5 @@ request(api, function (err, res, body) {
   if (err) {
   console.log(err);
   }
-  console.log(res.title);
+  console.log(JSON.parse(body).title);
 });
