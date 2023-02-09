@@ -4,5 +4,5 @@ request(process.argv[2], function (err, res, body) {
   if (err) {
     console.log(err);
   }
-  console.log("code: ", res.status);
+  console.log('code: ', res.status);
 });
