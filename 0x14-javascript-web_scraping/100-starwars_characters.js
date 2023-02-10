@@ -10,7 +10,7 @@ request(api, function (err, res, body) {
   
   for (const character of body) {
     request(character, function (err, res, body) {
-      console.log(body);
+      console.log(body.name);
     });
   }
 });
