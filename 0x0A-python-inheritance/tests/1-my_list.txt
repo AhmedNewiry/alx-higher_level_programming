@@ -19,7 +19,7 @@ import Mylist class:
 
 
 Checking that appending and sorting works:
-        >>> t_list = Mylist()
+        >>> t_list = MyList()
 	    >>> t_list.append(1)
 	    >>> t_list.append(8)
 	    >>> t_list.append(5)
