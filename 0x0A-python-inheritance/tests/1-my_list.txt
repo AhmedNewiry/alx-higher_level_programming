@@ -1,17 +1,17 @@
 test presence of 1-my_list module docs:
-         >>> mod_doc = __import__("1-my_list").__doc__
-         >>> len(mod_doc) > 1
-         True
+        >>> mod_doc = __import__("1-my_list").__doc__
+        >>> len(mod_doc) > 1
+        True
 
 test presence of Mylist class docs:
-         >>> list_doc = __import__("1-my_list").MyList.__doc__
-         >>> len(list_doc) > 1
-         True
+        >>> list_doc = __import__("1-my_list").MyList.__doc__
+        >>> len(list_doc) > 1
+        True
 
 test presence of print_sorted method docs:
-	    >>> print_doc = __import__("1-my_list").MyList.print_sorted.__doc__
-	    >>> len(print_doc) > 1
-	    True
+	>>> print_doc = __import__("1-my_list").MyList.print_sorted.__doc__
+	>>> len(print_doc) > 1
+	True
       
 import Mylist class:
         >>> MyList = __import__('1-my_list').MyList
@@ -20,11 +20,11 @@ import Mylist class:
 
 Checking that appending and sorting works:
         >>> t_list = MyList()
-	    >>> t_list.append(1)
-	    >>> t_list.append(8)
-	    >>> t_list.append(5)
-	    >>> t_list.append(4)
-	    >>> print(t_list)
-	    [1, 8, 5, 4]
+	>>> t_list.append(1)
+	>>> t_list.append(8)
+	>>> t_list.append(5)
+	>>> t_list.append(4)
+	>>> print(t_list)
+	[1, 8, 5, 4]
         >>> t_list.print_sorted()
         [1, 4, 5, 8]

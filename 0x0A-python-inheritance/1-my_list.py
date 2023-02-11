@@ -4,6 +4,7 @@
 
 class MyList(list):
     """inherits List class"""
+
     def __init__(self):
         """intitialize class instances"""
         super().__init__()
