@@ -8,8 +8,8 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """initializes instances of Rectangle class"""
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
         type(self).number_of_instances += 1
 
     @property
@@ -19,26 +19,26 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
-        """setter of with property"""
-        if not isinstance(width, int):
-            raise TypeError('with must be an integer')
-        if width < 0:
-            raise ValueError('with must be >= 0')
+        """setter of width property"""
+        if not isinstance(value, int):
+            raise TypeError('width must be an integer')
+        if value < 0:
+            raise ValueError('width must be >= 0')
         self.__width = value
 
     @property
     def height(self):
         """getter of height property"""
-        return self.__width
+        return self.__height
 
     @height.setter
     def height(self, value):
         """setter for height property"""
-        if not isinstance(width, int):
+        if not isinstance(value, int):
             raise TypeError('with must be an integer')
-        if width < 0:
+        if value < 0:
             raise ValueError('with must be >= 0')
-        self.__width = value
+        self.__height = value
 
     def area(self):
         """ a method that returns the rectangle area"""
