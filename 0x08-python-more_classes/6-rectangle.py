@@ -35,9 +35,9 @@ class Rectangle:
     def height(self, value):
         """setter for height property"""
         if not isinstance(value, int):
-            raise TypeError('with must be an integer')
+            raise TypeError('height must be an integer')
         if value < 0:
-            raise ValueError('with must be >= 0')
+            raise ValueError('height must be >= 0')
         self.__height = value
 
     def area(self):
