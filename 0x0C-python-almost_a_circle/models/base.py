@@ -4,9 +4,11 @@
 
 import json
 
+
 class Base:
 	"""Base class definition"""
 	__nb_objects = 0
+
 	def __init__(self, id=None):
 		"""initializer of base class"""
 		if id:
@@ -14,6 +16,7 @@ class Base:
 		else:
 			id = type(Base).__nb__objects + 1
 			self.id = id
+
 	@staticmethod
 	def to_json_string(list_dictionaries):
 		"""returns the JSON string representation of list_dictionaries"""
@@ -21,7 +24,7 @@ class Base:
 			return []
         else:
         	return json.dump(list_dictionaries)
-    
+
 
     @classmethod
     def save_to_file(cls, list_objs):
