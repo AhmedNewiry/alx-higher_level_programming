@@ -64,7 +64,7 @@ class Rectangle:
                 shape.append('#')
             if i < self.__height - 1:
                 shape.append('\n')
-        shape = shape.join('')
+        shape = ('').join(shape)
         return shape
 
     def __repr__(self):
