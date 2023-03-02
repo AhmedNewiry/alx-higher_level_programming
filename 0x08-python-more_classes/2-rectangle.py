@@ -3,47 +3,46 @@
 
 
 class Rectangle:
-	"""a class that defines a rectangle"""
+    """a class that defines a rectangle"""
 
-	def __init__(self, width=0, height=0):
-		"""initializes instances of Rectangle class"""
-		self.__width = width
-		self.__height = height
+    def __init__(self, width=0, height=0):
+        """initializes instances of Rectangle class"""
+        self.__width = width
+        self.__height = height
 
     @property
     def width(self):
-    	"""getter of with property"""
-    	return self.__width
+        """getter of with property"""
+        return self.__width
 
     @width.setter
     def width(self, value):
-    	"""setter of with property"""
-    	if type(width) is not int:
-    		raise TypeError('with must be an integer')
-    	if width < 0:
-    		raise ValueError('with must be >= 0')
-    	self.__width = value
+        """setter of with property"""
+        if not isinstance(width, int):
+            raise TypeError('with must be an integer')
+        if width < 0:
+            raise ValueError('with must be >= 0')
+        self.__width = value
 
     @property
     def height(self):
-    	"""getter of height property"""
-    	return self.__width
+        """getter of height property"""
+        return self.__width
 
     @height.setter
     def height(self, value):
-    	"""setter for height property"""
-    	if type(width) is not int:
-    		raise TypeError('with must be an integer')
-    	if width < 0:
-    		raise ValueError('with must be >= 0')
-    	self.__width = value
+        """setter for height property"""
+        if not isinstance(width, int):
+            raise TypeError('with must be an integer')
+        if width < 0:
+            raise ValueError('with must be >= 0')
+        self.__width = value
 
     def area(self):
         """ a method that returns the rectangle area"""
-        if  self.__height == 0 or self.__width == 0:
+        if self.__height == 0 or self.__width == 0:
             return 0
         return self.__height * self.__width
-
 
     def perimeter(self):
         """a method the returns the rectangle perimeter"""
