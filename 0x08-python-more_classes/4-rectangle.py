@@ -4,11 +4,12 @@
 
 class Rectangle:
     """a class that defines a rectangle"""
+
     def __init__(self, width=0, height=0):
         """initializes instances of Rectangle class"""
         self.__width = width
         self.__height = height
-    
+
     @property
     def width(self):
         """getter of with property"""
@@ -17,7 +18,7 @@ class Rectangle:
     @width.setter
     def width(self, value):
         """setter of with property"""
-        if type(width) is not int:
+        if not isinstance(width, int):
             raise TypeError('with must be an integer')
         if width < 0:
             raise ValueError('with must be >= 0')
@@ -31,7 +32,7 @@ class Rectangle:
     @height.setter
     def height(self, value):
         """setter for height property"""
-        if type(width) is not int:
+        if not isinstance(width, int):
             raise TypeError('with must be an integer')
         if width < 0:
             raise ValueError('with must be >= 0')
@@ -39,10 +40,9 @@ class Rectangle:
 
     def area(self):
         """ a method that returns the rectangle area"""
-        if  self.__height == 0 or self.__width == 0:
+        if self.__height == 0 or self.__width == 0:
             return 0
         return self.__height * self.__width
-
 
     def perimeter(self):
         """a method the returns the rectangle perimeter"""
