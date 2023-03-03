@@ -14,9 +14,10 @@ if __name__ == '__main__':
     user = sys.argv[1]
     passwd = sys.argv[2]
     db = sys.argv[3]
-    engine = create_engine("mysql+mysqldb://{}:{}@{}:{}/\
-                            {}".format(user, passwd, host,\
-                            port, db))
+    engine = create_engine('mysql+mysqldb://{}:{}@{}:{}/{}'.format(user,
+                                                                   passwd,
+                                                                   host, port,
+                                                                   db))
     Session = sessionmaker(bind=engine)
     session = Session()
     states = session.query(State).order_by(State.id).all()
