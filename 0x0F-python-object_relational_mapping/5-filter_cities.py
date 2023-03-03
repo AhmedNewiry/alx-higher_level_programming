@@ -28,8 +28,9 @@ if __name__ == '__main__':
     cities = db_cursor.fetchall()
     for i in range(len(cities)):
         if i == len(cities) - 1:
-            print(''.join(cities[i]))
+            print(''.join(cities[i]), end='')
         else:    
             print(''.join(cities[i]), end=', ')
+    print('')
     db_cursor.close()
     connection.close()
