@@ -20,10 +20,11 @@ if __name__ == '__main__':
                                  db=db)
     db_cursor = connection.cursor()
     argument = sys.argv[4]
-    command = db_cursor.execute("""SELECT `c`.`name`from `states` AS s inner join
-                                   `cities` AS c ON `s`.`id` = `c`.`state_id` WHERE
-                                   `s`.`name` = %(argument)s ORDER BY `c`.`id`""",
-                                   {'argument': argument})
+    command = db_cursor.execute("""SELECT `c`.`name`from `states` AS s inner
+                                   join `cities` AS c ON `s`.`id` =
+                                   `c`.`state_id` WHERE `s`.`name` =
+                                   %(argument)s ORDER BY `c`.`id`""",
+                                {'argument': argument})
     cities = db_cursor.fetchall()
     for i in range(len(cities)):
         print(cities[i], end=', ' if (i != len(cities) - 1) else end="")
