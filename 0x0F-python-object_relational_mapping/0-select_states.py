@@ -19,6 +19,6 @@ if __name__ == '__main__':
     command = db_cursor.execute("""SELECT * FROM `states` ORDER BY `id`""")
     states = command.fetchall()
     for state in states:
-        print state
+        print(state)
     db_cursor.close()
     connection.close()
