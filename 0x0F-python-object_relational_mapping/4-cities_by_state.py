@@ -20,7 +20,7 @@ if __name__ == '__main__':
     db_cursor = connection.cursor()
     command = db_cursor.execute("""SELECT * FROM `cities` ORDER BY `id`""")
     cities = db_cursor.fetchall()
-    for city in citites:
+    for city in cities:
         print(city)
     db_cursor.close()
     connection.close()
