@@ -25,7 +25,7 @@ if __name__ == '__main__':
                                    `s`.`name` = %(argument)s ORDER BY `c`.`id`""",
                                    {'argument': argument})
     cities = db_cursor.fetchall()
-    for city in cities:
-        print(city)
+    for i in range(len(cities)):
+        print(cities[i], end=', ' if (i != len(cities) - 1) else end="")
     db_cursor.close()
     connection.close()
