@@ -9,9 +9,14 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 if __name__ == '__main__':
-    engine = create_engine("mysql+mysqldb://{}:{}@localhost:3306/\
-                            {}".format(sys.argv[1],\
-                            sys.argv[2], sys.argv[3]))
+    host = 'localhost'
+    port = 3306
+    user = sys.argv[1]
+    passwd = sys.argv[2]
+    db = sys.argv[3]
+    engine = create_engine("mysql+mysqldb://{}:{}@{}:{}/\
+                            {}".format(user, passwd, host,\
+                            port, db))
     Session = sessionmaker(bind=engine)
     session = Session()
     states = session.query(State).order_by(State.id).all()
