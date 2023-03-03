@@ -21,8 +21,8 @@ if __name__ == '__main__':
                                  db=db)
     argument = sys.argv[4]
     db_cursor = connection.cursor()
-    command = db_cursor.execute("""SELECT * FROM `states` where `name` = '{:s}'
-                                   ORDER BY `id`""".format(argument))
+    command = db_cursor.execute("""SELECT * FROM `states` where `name` = %(argument)s
+                                   ORDER BY `id`""", {'argument':argument})
     states = command.fetchall()
     for state in states:
         print state
