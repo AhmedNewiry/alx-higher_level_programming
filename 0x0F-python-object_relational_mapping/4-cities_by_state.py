@@ -19,7 +19,7 @@ if __name__ == '__main__':
                                  db=db)
     db_cursor = connection.cursor()
     command = db_cursor.execute("""SELECT c.id, c.name, s.name form
-                                   `states` AS s inner join `cities` ON
+                                   `states` AS s inner join `cities` AS c ON
                                     S.id = c.state_id ORDER BY `c`.`id`""")
     cities = db_cursor.fetchall()
     for city in cities:
