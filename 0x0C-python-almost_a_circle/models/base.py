@@ -14,8 +14,8 @@ class Base:
         if id:
             self.id = id
         else:
-            d = type(Base).__nb__objects + 1
-            self.id = id
+            type(self).__nb_objects + 1
+            self.id = type(self).__nb_objects
 
     @staticmethod
     def to_json_string(list_dictionaries):
