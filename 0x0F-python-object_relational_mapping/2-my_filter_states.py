@@ -24,7 +24,7 @@ if __name__ == '__main__':
     db_cursor.execute("""SELECT * FROM `states` where `name` = '{:s}'
                                    ORDER BY `id`""".format(argument))
     states = db_cursor.fetchall()
-    for states in state:
+    for state in states:
         if state[1] == sys.argv[4]:
             print(state)
     db_cursor.close()
