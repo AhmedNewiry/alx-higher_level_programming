@@ -27,6 +27,8 @@ if __name__ == '__main__':
                                 {'argument': argument})
     cities = db_cursor.fetchall()
     for i in range(len(cities)):
-        print(cities[i], end=', ' if (i != len(cities) - 1) else end="")
+        if i == len(cities) - 1:
+            print(cities[i], end='')
+        print(cities[i], end=', ')
     db_cursor.close()
     connection.close()
