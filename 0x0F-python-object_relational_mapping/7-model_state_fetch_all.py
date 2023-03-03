@@ -4,7 +4,7 @@
 """
 
 import sys
-from model_state import State, Base
+from model_state import State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
@@ -21,4 +21,4 @@ if __name__ == '__main__':
     session = Session()
     states = session.query(State).order_by(State.id).all()
     for state in states:
-        print(f'{state.id}: {state.name}')
+        print('{}: {}'.format(state.id, state.name))
