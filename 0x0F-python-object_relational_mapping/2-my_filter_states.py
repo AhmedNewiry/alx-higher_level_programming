@@ -23,7 +23,7 @@ if __name__ == '__main__':
     db_cursor = connection.cursor()
     command = db_cursor.execute("""SELECT * FROM `states` where `name` = '{:s}'
                                    ORDER BY `id`""".format(argument))
-    states = command.fetchall()
+    states = db_cursor.fetchall()
     for state in states:
         print(state)
     db_cursor.close()

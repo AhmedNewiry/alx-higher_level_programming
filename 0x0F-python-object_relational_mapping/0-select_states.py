@@ -16,8 +16,8 @@ if __name__ == '__main__':
                                  passwd=passwd,
                                  db=db)
     db_cursor = connection.cursor()
-    command = db_cursor.execute("""SELECT * FROM `states` ORDER BY `id`""")
-    states = command.fetchall()
+    db_cursor.execute("""SELECT * FROM `states` ORDER BY `id`""")
+    states = db_cursor.fetchall()
     for state in states:
         print(state)
     db_cursor.close()
