@@ -29,7 +29,7 @@ if __name__ == '__main__':
     for i in range(len(cities)):
         if i == len(cities) - 1:
             print(''.join(cities[i]), end='')
-        else:    
+        else:
             print(''.join(cities[i]), end=', ')
     print('')
     db_cursor.close()
