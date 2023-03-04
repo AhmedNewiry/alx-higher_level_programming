@@ -38,13 +38,13 @@ class Square(Rectangle):
                 index += 1
         elif kwargs:
             for key, value in kwargs.items():
-                if k == "id":
+                if key == "id":
                     self.id = value
-                elif k == "size":
+                elif key == "size":
                     self.size(value)
-                elif k == "x":
+                elif key == "x":
                     self.x = value
-                elif k == "y":
+                elif key == "y":
                     self.y = value
 
     def to_dictionary(self):
