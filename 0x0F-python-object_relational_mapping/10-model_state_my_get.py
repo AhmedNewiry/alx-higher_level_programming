@@ -22,7 +22,7 @@ if __name__ == '__main__':
     Base.metadata.create_ all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    states = session.query(State).filter(State.name == name).one_or_none()
+    states = session.query(State).filter(State.name == name)
     if states:
         for state in states:
             print(state.id)
