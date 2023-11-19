@@ -19,13 +19,12 @@ if __name__ == '__main__':
                                                                    passwd,
                                                                    host, port,
                                                                    db))
-    Base.metadata.create_ all(engine)
+    Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    states = session.query(State).filter(State.name == name)
-    if states:
-        for state in states:
-            print(state.id)
+    state = session.query(State).filter(State.name == name).one_or_none()
+    if state:
+        print(state.id)
     else:
         print("Not Found")  
     session.close()
