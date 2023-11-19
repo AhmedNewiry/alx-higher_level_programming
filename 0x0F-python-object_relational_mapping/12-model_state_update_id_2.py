@@ -14,12 +14,11 @@ if __name__ == '__main__':
     user = sys.argv[1]
     passwd = sys.argv[2]
     db = sys.argv[3]
-    name = sys.argv[4]
     engine = create_engine('mysql+mysqldb://{}:{}@{}:{}/{}'.format(user,
                                                                    passwd,
                                                                    host, port,
                                                                    db))
-    Base.metadata.create_ all(engine)
+    Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
  
