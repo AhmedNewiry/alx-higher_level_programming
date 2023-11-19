@@ -25,7 +25,8 @@ if __name__ == '__main__':
     louisiana = State(name="Louisiana")
     state = session.add(louisiana)
     session.commit()
-    get_louisiana = session.query(State).filter(State.name == "Louisiana").one_or_none()
+    get_louisiana = session.query(State).filter(
+        State.name == "Louisiana").one_or_none()
     if get_louisiana:
         print(get_louisiana.id)
     session.close()
