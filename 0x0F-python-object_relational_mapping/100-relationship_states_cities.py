@@ -4,8 +4,8 @@
 """
 
 import sys
-from model_state import State, Base
-from model_city import City
+from relationship_state import State, Base
+from relationship_city import City
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
