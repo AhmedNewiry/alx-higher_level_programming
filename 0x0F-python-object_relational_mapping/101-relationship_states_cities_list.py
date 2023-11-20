@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""   lists all State objects, and corresponding City objects, 
+"""   lists all State objects, and corresponding City objects,
 """
 
 import sys
@@ -21,10 +21,14 @@ if __name__ == '__main__':
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    results = session.query(State, City).join(State.cities).order_by(State.id).all()
+    results = session.query(
+        State,
+        City).join(
+        State.cities).order_by(
+            State.id).all()
     for result in results:
-          print("{}: {}".format(result.State.id, result.State.name))
-          for city in result.State.cities:
-               print("   {}: {}".format(city.id, city.name))
+        print("{}: {}".format(result.State.id, result.State.name))
+        for city in result.State.cities:
+            print("   {}: {}".format(city.id, city.name))
 
     session.close()
