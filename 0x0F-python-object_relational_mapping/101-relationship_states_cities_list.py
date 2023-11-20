@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-""" a script that Changes the name of state
-    object from the database
+"""   lists all State objects, and corresponding City objects, 
 """
 
 import sys
 from model_state import State, Base
-from sqlalchemy import create_engine
+from model_city import City
+from sqlalchemy import create_engine, create_all
 from sqlalchemy.orm import sessionmaker
 
 if __name__ == '__main__':
@@ -21,9 +21,10 @@ if __name__ == '__main__':
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
+    results = session.query(State, City).join(State.cities).order_by(State.id).all()
+    for result in results:
+          print("{}: {}".format(result.State.id, result.State.name))
+          for city in result.State.cities:
+               print("   {}: {}".format(city.id, city.name))
 
-    state = session.query(State).filter(State.id == 2).one_or_none()
-    if state:
-        state.name = "New Mexico"
-        session.commit()
     session.close()
