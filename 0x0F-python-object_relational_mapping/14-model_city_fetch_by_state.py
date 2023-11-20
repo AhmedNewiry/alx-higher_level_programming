@@ -20,7 +20,7 @@ if __name__ == '__main__':
                                                                    passwd,
                                                                    host, port,
                                                                    db))
-    Base.metadata.create_ all(engine)
+    Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
  
