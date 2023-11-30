@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" a script that adds the state object 
+""" a script that adds the state object
     'Louisiana' to the database
 """
 
@@ -19,13 +19,14 @@ if __name__ == '__main__':
                                                                    passwd,
                                                                    host, port,
                                                                    db))
-    Base.metadata.create_ all(engine)
+    Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
     louisiana = State(name="Louisiana")
-    session.commit()
     state = session.add(louisiana)
-    get_louisiana = session.query(State).filter(State.name == "Louisiana").one_or_none()
+    session.commit()
+    get_louisiana = session.query(State).filter(
+        State.name == "Louisiana").one_or_none()
     if get_louisiana:
         print(get_louisiana.id)
     session.close()

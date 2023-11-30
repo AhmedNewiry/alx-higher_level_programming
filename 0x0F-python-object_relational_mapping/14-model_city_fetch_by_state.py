@@ -20,11 +20,20 @@ if __name__ == '__main__':
                                                                    passwd,
                                                                    host, port,
                                                                    db))
-    Base.metadata.create_ all(engine)
+    Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
- 
-    results = session.query(State.name, City.id, City.name).join(State.cities).order_by(City.id)
+
+    results = session.query(
+        State,
+        City).join(
+        City,
+        State.id == City.state_id).order_by(
+            City.id)
     for result in results:
-        print (f"{result.State.name}:({result.City.id}) {result.City.name}")
+        print(
+            "{}: ({}) {}".format(
+                result.State.name,
+                result.City.id,
+                result.City.name))
     session.close()

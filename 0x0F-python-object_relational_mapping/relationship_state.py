@@ -13,3 +13,4 @@ class State(Base):
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=True)
+    cities = relationship("City", backref="states", cascade="all, delete, delete-orphan")

@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-""" a script that Changes the name of state
-    object from the database
+"""  creates the State “California” with
+     the City “San Francisco”
 """
 
 import sys
-from model_state import State, Base
+from relationship_state import State, Base
+from relationship_city import City
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
@@ -21,9 +22,9 @@ if __name__ == '__main__':
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
+    california = State(name="California")
+    california.cities.append(City(name="San Francisco"))
+    session.add(california)
+    session.commit()
 
-    state = session.query(State).filter(State.id == 2).one_or_none()
-    if state:
-        state.name = "New Mexico"
-        session.commit()
     session.close()
