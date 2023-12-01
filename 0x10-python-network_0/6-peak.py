@@ -3,6 +3,7 @@
 
 
 def find_peak(list_of_integers):
+    """find the peak in unsorted array"""
     left = 0
     right = len(list_of_integers) - 1
     while right >= left:
